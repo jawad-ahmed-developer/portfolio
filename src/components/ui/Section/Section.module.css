@@ -1,0 +1,11 @@
+.section {
+  padding-block: var(--space-16);
+  /* Keeps the section title visible below the sticky header after a nav click */
+  scroll-margin-top: var(--header-height);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-24);
+  }
+}

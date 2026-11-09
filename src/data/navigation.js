@@ -1,0 +1,10 @@
+// Single source of truth for section ids and nav labels.
+// Header, Footer and the placeholder sections all read from here.
+export const navItems = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'contact', label: 'Contact' },
+]

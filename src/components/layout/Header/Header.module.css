@@ -1,0 +1,125 @@
+/* Skip link: hidden until it receives keyboard focus */
+.skipLink {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-on-accent);
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.skipLink:focus {
+  top: var(--space-2);
+  color: var(--color-on-accent);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--color-accent);
+}
+
+/* Mobile-first: hamburger visible, menu is a dropdown panel */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: var(--text-lg);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.toggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: var(--header-height);
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--space-2) var(--space-6) var(--space-4);
+  list-style: none;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menuOpen {
+  display: flex;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+.link[aria-current='true'] {
+  color: var(--color-accent);
+}
+
+/* md and up: inline menu, no hamburger */
+@media (min-width: 768px) {
+  .toggle {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: var(--space-2);
+    padding: 0;
+    background: none;
+    border-bottom: 0;
+  }
+
+  .link {
+    padding-inline: var(--space-3);
+    font-size: var(--text-sm);
+  }
+}

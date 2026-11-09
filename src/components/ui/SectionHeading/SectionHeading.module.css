@@ -1,0 +1,15 @@
+.title {
+  margin-bottom: var(--space-10);
+  font-size: var(--text-3xl);
+}
+
+/* Short accent bar under every section title */
+.title::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: var(--space-3);
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
