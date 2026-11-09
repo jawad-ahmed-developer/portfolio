@@ -2,7 +2,7 @@
 
 Personal portfolio website for **Jawad Ahmed**, an aspiring AI engineer and BS Computer Science student at Sukkur IBA University. It presents my skills, projects, experience and contact details in a single-page, frontend-only React application.
 
-- **Live site:** [PASTE LIVE URL HERE]
+- **Live site:** https://portfolio-react-7f48.vercel.app/
 - **Repository:** https://github.com/jawad-ahmed-developer/portfolio
 
 ## Features
