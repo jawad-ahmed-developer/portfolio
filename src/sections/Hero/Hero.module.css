@@ -1,0 +1,80 @@
+/* Mobile-first: single column, text first, then the visual */
+.hero {
+  display: grid;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.name {
+  font-size: var(--text-4xl);
+}
+
+.title {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+}
+
+.intro {
+  max-width: 38rem;
+  margin-top: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.social {
+  margin-top: var(--space-8);
+}
+
+.visual {
+  justify-self: center;
+}
+
+.photo,
+.monogram {
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.monogram {
+  display: grid;
+  place-items: center;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 500;
+  background-color: var(--color-surface);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .photo,
+  .monogram {
+    width: 18rem;
+    height: 18rem;
+  }
+}

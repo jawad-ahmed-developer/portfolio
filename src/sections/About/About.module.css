@@ -1,0 +1,42 @@
+.layout {
+  display: grid;
+  gap: var(--space-10);
+}
+
+.text {
+  display: grid;
+  gap: var(--space-5);
+  max-width: 40rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.interests {
+  align-self: start;
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.interestsTitle {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-12);
+  }
+}
